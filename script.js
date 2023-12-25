@@ -1,66 +1,63 @@
-// ! Function decloration
-// function myFunc(str) {
-//     return str
+// let arr = ['Hello', 'Hi', 'everybody','world']
+// console.log(arr.reduce((acc, el) => {
+//     return Math.max(acc, el)
+//     return acc > el ? acc : el
+//     return acc.length < el.length ? acc : el
+// }))
+
+
+
+// let arr = ['Nurtilek', 'Abdullaeva', 'Khabibillaev', 'Elmara', ]
+// console.log(arr.reduce((acc, el) => {
+//     return el[0] + acc.slice(1) + ' ' + acc[0] + el.slice(1)
+// }))
+
+
+
+// let arr = [-19, 20, 13, -2, 51, -24, 17, 12]
+// const sum = (num) => {
+//     let posNumber = num.filter(el => el > 0 && el % 2 === 0)
+//     return posNumber.reduce((acc, elem) => {
+//         return (acc, elem ** 2) + (acc + elem)
+//     })
 // }
-// console.log(myFunc('motion'))
+// console.log(sum(arr))
 
 
 
-// ! Function expression
-// const myFn = function () {
-//     return 'hello world!'
+
+// let arr = ['Hellooooooooooooooooooo', 'everybody', 'welcome', 'too', 'this', 'world!']
+// let long = arr.reduce((acc, el) => (acc.length > el.length ? acc : el));
+// let short = arr.reduce((acc, el) => (acc.length < el.length ? acc : el));
+// console.log(long[0].toUpperCase() + long.slice(1, -1).toLowerCase() + long[long.length - 1].toUpperCase());
+// console.log(short[0].toLowerCase() + short.slice(1, -1).toUpperCase() + short[short.length - 1].toLowerCase());
+
+
+
+
+// function generateHashtag(str) {
+//   let result = str
+//     .split(" ")
+//     .filter((elem) => {
+//       return elem !== "" && elem !== " ";
+//     })
+//     .map((el) => {
+//       return el !== " " ? el[0].toUpperCase() + el.slice(1) : false;
+//     })
+//     .join("");
+//   let hashtag = "#" + result;
+//   return str && result && result.length < 140 ? hashtag : false;
 // }
-// console.log(myFn())
 
 
+let arr = "motion web IT academy" 
+const enter = (str) => {
+    let result = str.trim(' ').split(' ').filter(el => {
+        return el !== el.toUpperCase()
+    }).map(el => {
+        return el[0].toUpperCase() + el.slice(1).toLowerCase()
+    }).join('')
+    return result !== ' '.replace(result.length) && result !== '' ?  '#' + result : false 
+}
+console.log(enter(arr)) 
 
-// ! Arrow function =>
-// const myFunc = () => {
-//     return 'hello world!'
-// }
-// console.log(myFunc())
-
-
-
-// function myFunc(str) {
-//     if (str[0] === 'n') {
-//         return str + 'academy';
-//     }
-//     return 'web';
-// }
-// console.log(myFunc('motion'))
-
-
-// function plusNumbers(num) {
-//     return num ** 2
-// }
-// console.log(plusNumbers(100))
-
-
-
-// function square(number) {
-//     let result = number ** 2
-//     console.log(result)
-// }
-// square(10)
-
-
-
-
-//?
-// function numbers(numberOne, numberTwo) {
-//     return numberOne ** numberTwo
-// }
-// console.log(numbers(2,3))
-
-
-// const numbers = function (numberOne, numberTwo) {
-//     return numberOne ** numberTwo
-// }
-// console.log(numbers(2,3))
-
-
-// const numbers = (numberOne, numberTwo) => {
-//     return numberOne ** numberTwo
-// }
-// console.log(numbers(2, 3))
